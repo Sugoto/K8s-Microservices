@@ -9,9 +9,6 @@ import (
 
 var validate *validator.Validate
 
-// init() is a special function that will run when this package is imported.
-// It instantiates a SINGLE instance of *validator.Validate with the added
-// benefit of caching struct info and validations.
 func init() {
 	validate = validator.New(validator.WithRequiredStructEnabled())
 }
@@ -42,7 +39,6 @@ type SetCurrencyPayload struct {
 	Currency string `validate:"required,iso4217"`
 }
 
-// Implementations of the 'Payload' interface.
 func (ad *AddToCartPayload) Validate() error {
 	return validate.Struct(ad)
 }
@@ -55,7 +51,6 @@ func (sc *SetCurrencyPayload) Validate() error {
 	return validate.Struct(sc)
 }
 
-// Reusable error response function.
 func ValidationErrorResponse(err error) error {
 	validationErrs, ok := err.(validator.ValidationErrors)
 	if !ok {
