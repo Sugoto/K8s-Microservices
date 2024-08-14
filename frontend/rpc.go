@@ -97,7 +97,7 @@ func (fe *frontendServer) getRecommendations(ctx context.Context, userID string,
 		out[i] = p
 	}
 	if len(out) > 4 {
-		out = out[:4] // take only first four to fit the UI
+		out = out[:4]
 	}
 	return out, err
 }
