@@ -81,6 +81,9 @@ def logout(l):
 
 
 class UserBehavior(TaskSet):
+    """
+    Represents the behavior of a user in the load testing scenario.
+    """
 
     def on_start(self):
         index(self)
