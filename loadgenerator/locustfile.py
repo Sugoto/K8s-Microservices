@@ -53,6 +53,7 @@ def empty_cart(l):
 
 
 def checkout(l):
+    """Handles the POST request to add a product to the cart and the POST request to checkout."""
     addToCart(l)
     current_year = datetime.datetime.now().year + 1
     l.client.post(
