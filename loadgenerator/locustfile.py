@@ -76,6 +76,7 @@ def checkout(l):
 
 
 def logout(l):
+    """Handles the GET request to logout."""
     l.client.get("/logout")
 
 
