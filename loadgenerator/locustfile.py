@@ -25,6 +25,7 @@ def index(l):
 
 
 def setCurrency(l):
+    """Handles the POST request to set the currency, randomly choosing one from a list."""
     currencies = ["EUR", "USD", "JPY", "CAD", "GBP", "TRY"]
     l.client.post("/setCurrency", {"currency_code": random.choice(currencies)})
 
