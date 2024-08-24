@@ -31,6 +31,7 @@ def setCurrency(l):
 
 
 def browseProduct(l):
+    """Handles the GET request to view a product, randomly choosing one from a list."""
     l.client.get("/product/" + random.choice(products))
 
 
