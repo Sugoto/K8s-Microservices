@@ -48,6 +48,7 @@ def addToCart(l):
 
 
 def empty_cart(l):
+    """Handles the POST request to empty the cart."""
     l.client.post("/cart/empty")
 
 
