@@ -41,6 +41,7 @@ def viewCart(l):
 
 
 def addToCart(l):
+    """Handles the GET request to view a product and the POST request to add that product to the cart."""
     product = random.choice(products)
     l.client.get("/product/" + product)
     l.client.post("/cart", {"product_id": product, "quantity": random.randint(1, 10)})
