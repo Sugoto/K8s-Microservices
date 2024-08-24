@@ -36,6 +36,7 @@ def browseProduct(l):
 
 
 def viewCart(l):
+    """Handles the GET request to view the cart."""
     l.client.get("/cart")
 
 
