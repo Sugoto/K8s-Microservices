@@ -20,6 +20,7 @@ products = [
 
 
 def index(l):
+    """Handles the GET request to the index page."""
     l.client.get("/")
 
 
