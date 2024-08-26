@@ -1,4 +1,3 @@
-#!/usr/bin/python
 import random
 from locust import FastHttpUser, TaskSet, between
 from faker import Faker
